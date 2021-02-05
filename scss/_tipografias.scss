@@ -6,6 +6,11 @@ $gris: #484848;
 $azul: #255A7B;
 //Tamaños de tipografías
 
+.col-md-custom-4 {
+	flex: 0 0 29.166665%;
+	max-width: 29.166665%;
+}
+
 .title {
 	font-family: chapaza;
 	font-size: 4rem;
@@ -15,7 +20,9 @@ $azul: #255A7B;
 		font-size: 2.2rem;
 	}
 
-	
+	&.gris{
+		color: $gris;
+	}
 }
 .paragraph {
 	font-family: montserrat-regular;
@@ -45,6 +52,14 @@ $azul: #255A7B;
 	&.v2{
 		font-family: montserrat-bold;
 		font-size: 2rem;
+	}
+
+	&.gris{
+		color: $gris;
+	}
+
+	&.rosa{
+		color: $rosaM;
 	}
 }
 
@@ -132,6 +147,36 @@ $azul: #255A7B;
 
 }
 
+
+.underline-custom {
+	position: relative;
+	display: inline-flex;
+
+	&:before{
+		content: "";
+	    height: 4px;
+	    width: 75%;
+	    border-radius: 5px;
+	    background-color: #BCFFEA;
+	    position: absolute;
+	    bottom: 5px;
+	    right: 0;
+	    z-index: -1;
+	}
+
+	&.left{
+		&:before{
+			right: unset;
+			left: 0;
+		}
+	}
+
+	&.small{
+		&:before{
+			width: 15%;
+		}
+	}
+}
 
 
 

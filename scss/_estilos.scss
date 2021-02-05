@@ -19,6 +19,8 @@ a:hover {
 	cursor: pointer;
 }
 
+
+
 a:focus {
 	outline: none;
 }
@@ -33,7 +35,7 @@ header.header{
 	top: 0;
 	background-color: transparent;
 	padding: 2rem 5.66666%;
-
+	z-index: 100;
 	.anclas{
 		a{
 			font-family: montserrat-bold;
@@ -160,6 +162,43 @@ section.experiencia{
 	}
 }
 
+
+
+section.conoceme{
+	padding-top: 7.5rem;
+
+	.row-conoceme{
+		position: relative;
+
+		.rectangulo{
+			top: 26.3rem;
+			left: -3rem;
+			z-index: -1;
+		}
+		.conoce-img1 {
+
+		}
+
+		.conoce-img2 {
+			position: relative;
+			margin-top: 27.3rem;
+		}
+	}
+}
+
+
+
+section.noticias{
+	padding-top: 9.75rem;
+
+
+
+	.posts-principal{
+		border: 1px solid #FFE2E8;
+		border-radius: 5px 5px 100px 5px;
+	}
+
+}
 //Fondos partículares
 
 @keyframes pulse{

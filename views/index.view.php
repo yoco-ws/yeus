@@ -187,6 +187,80 @@
 
 		<section class="conoceme">
 			<div class="container-fluid">
+				<div class="row row-conoceme">
+					<div class="col-md-custom-4 conoce-img1">
+						<img src="<?=RUTA?>img/conoce-1.png" class="img-fluid" alt="">
+					</div>
+					<div class="col-md-3 conoce-img2">
+						<img src="<?=RUTA?>img/conoce-2.png" class="img-fluid" alt="">
+					</div>		
+					<div class="col-md-6 forma rectangulo">
+						<img src="<?=RUTA?>sprites/rect-16.svg" class=" img-fluid"  alt="">
+					</div>
+					
+					
+
+					<div class="col-md-5 ml-5 d-flex flex-wrap">
+						<a href="" class="anchor small no-underline ml-auto underline-custom"> Conóceme </a>
+						<div class="paragraph">
+							<p>Nací en La Ciudad de México y vivo en Mérida Yucatán desde los 4 años. Mi familia y mis raíces son yucatecas y por lo tanto me ostento orgullosa hija de la tierra del mayab.</p>
+							<br>
+							<p>Soy Médico porque desde siempre ha existido en mí la vocación de servicio y ayuda al prójimo. Soy afortunada de vivir lo que un día fuera mi sueño.</p>
+							<br>
+							<p>Me gusta leer, soy un pequeño ratón de biblioteca. Amo la música y me apasiona el baile. Me declaro amante del café y de las velas aromáticas.</p>
+							<br>
+							<p>Me apasiona mi profesión. El día que deje de amarla, habré dejado de existir.</p>
+							<br>
+							<p>En general soy apasionada e intensa. Vivo cada instante como si fuera el último.</p>
+							<br>
+							<p>Me asusta la soledad, soy extremadamente sociable.</p>
+							<br>
+							<p>Mis errores y aciertos me definen, sin ellos y la historia de cada uno, dejaría de ser yo misma.</p>
+						</div>
+					</div>				
+				</div>
+			</div>
+		</section>
+
+		<section class="noticias">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-11 offset-md-1">
+						<h2 class="subtitle rosa">
+							Editorial
+						</h2>
+						<h1 class="title underline-custom left small gris">
+							Salud y vida
+						</h1>
+					</div>
+
+					<div class="col-md-10 px-0 offset-md-1 posts-principal">
+						<div class="row align-items-center">
+							<div class="col-md-7">
+								<img src="https://placehold.it/661x372/" alt="" class="img-fluid">
+							</div>
+							<div class="col-md-5 ">
+								<div class="row">
+									<div class="col-md-7 ">
+										<h2 class="subtitle gris">
+											Llamado enérgico a unirse a #SoloDona
+										</h2>
+									</div>
+									<div class="col-md-11">
+										<div class="paragraph montserrat-medium">
+											<p>Como se ha mencionado por las autoridades estatales, los indicadores del semáforo epidemiológico se encuentran en ascenso. El porcentaje de ocupación en cuidados intensivos aumentó el 6%, y el incremento en admisiones hospitalarias fue del 43% en la primera quincena de 2021.</p>
+
+											<p> Una vez más me permito hacer un llamado enérgico a los héroes anónimos, ya que en este... .</p>
+										</div>
+
+										<a href="footer.view.php" class="anchor"> Leer más </a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<div class="row">
 					
 				</div>
