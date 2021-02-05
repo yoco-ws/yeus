@@ -23,9 +23,156 @@ a:focus {
 	outline: none;
 }
 
+.bellow-nav{
+	padding-top: 12.5rem;
+}
+
+header.header{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	background-color: transparent;
+	padding: 2rem 5.66666%;
+
+	.anclas{
+		a{
+			font-family: montserrat-bold;
+			font-size: 1.5rem;
+			color: $gris;
+			position: relative;
+			margin-left: 4.5rem;
+
+			&:after{
+				content: "";
+				background-color: $rosa2;
+				height: 2px;
+				width: 0;
+				transition: 0.4s;
+				position: absolute;
+				bottom: -3px;
+				left: 0;
+			}
+			&:hover{
+				color: $rosa2;
+				text-decoration: none;
+
+				&:after{
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.forma{
+	position: absolute;
+	z-index: 1;
+}
+
+section.filing{
+	position: relative;
+	background: transparent linear-gradient(180deg, #FFFFFF00 0%, #FCE2E739 73%, #F492A512 100%) 0% 0% no-repeat padding-box;
+	padding-bottom: 8.7rem;
+
+	.paragraph {
+		margin-bottom: 6rem;
+	}
+	.col-md-5{
+		img:first-child{
+			margin-bottom: 4rem;
+		}
+	}
+
+	.rect-1{
+		bottom: 0;
+		left: 0;
+	}
+	
+	.imagen-principal{
+		position: relative;
+
+		figure{
+			margin-bottom: 0;
+			display: inline-flex;
+			position: relative;
+			.forma{
+				z-index: -1 !important;
+			}
+			.marco{
+				bottom: -1rem;
+				right: -1rem;
+			}
+			.forma-1{
+				top: 8.2rem;
+				left: -3.5rem;
+			}
+			.forma-2{
+				top: 10.1rem;
+				left: -2rem;
+			}
+			.forma-3{
+				bottom: -3rem;
+				right: -3rem;
+			}
+			img{
+
+			}
+		}
+	}
+}
+
+
+section.services{
+	position: relative;
+	background-color: #DFF6EC;
+	padding: 6.2rem 0;
+
+	.rect-1{
+		bottom: -1rem;
+		left: 0;
+	}
+
+	.offset-custom{
+		margin-left: 11.49999%;
+	}
+
+	.protocolos{
+		margin-top: 4rem;
+	}
+}
+
+
+section.experiencia{
+	padding: 7.2rem 0 0 0;
+
+	.offset-custom-1{
+		margin-left: 6.44444%;
+	}
+
+	figure{
+		position: relative;
+		display: inline-flex;
+		
+		.bg-imagen{
+			bottom: -5rem;
+			right: -5rem;
+		}
+	}
+}
+
 //Fondos partículares
 
-
+@keyframes pulse{
+	0%{
+		transform: scaleX(1);
+	}
+	50%{ 
+		transform: scale3d(1.05,1.05,1.05);
+	}
+	100%{ 
+		transform: scaleX(1);
+	}
+}
 
 //Estilos particulares
 

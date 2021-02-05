@@ -1,7 +1,7 @@
 <?php 
 
 
-	define('RUTA','http://localhost/');
+	define('RUTA','http://localhost/yeus/');
 
 
 
@@ -28,9 +28,9 @@
 
 	#Own 
 	#	js
-		$own_file_js = '<script src="'.RUTA.'js/example.js"></script>';
+		$own_file_js = '<script src="'.RUTA.'js/yeus.js"></script>';
 	#	css
-		$own_file_css = '<link rel="stylesheet" href="'.RUTA.'css/example.min.css">';
+		$own_file_css = '<link rel="stylesheet" href="'.RUTA.'css/yeus.min.css">';
 	
 
 	#Extra

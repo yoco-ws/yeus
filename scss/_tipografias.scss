@@ -1,32 +1,204 @@
-.text-black {
-	color: #000!important;
-}
-
-.text-white   {
-	color: #fff!important;
-}
-
+$turquesa: #548096;
+$rosa: #FFAFBF;
+$rosaM: #F25C79;
+$rosa2: #F492A5;
+$gris: #484848;
+$azul: #255A7B;
 //Tamaños de tipografías
 
-.title{
+.title {
+	font-family: chapaza;
+	font-size: 4rem;
+	color: $turquesa; 
 
+	&.v2{
+		font-size: 2.2rem;
+	}
+
+	
+}
+.paragraph {
+	font-family: montserrat-regular;
+	font-size: 1.5rem;
+	color: $gris;
+
+
+	&.blue{
+		color: $azul;
+	}
+
+
+
+	ul{
+		padding-left: 2rem;
+	}
+	strong,b{
+		color: $azul;
+		font-family: montserrat-medium;
+	}
+}
+.subtitle {
+	font-family: montserrat-semibold;
+	font-size: 1.6rem;
+	color: $rosa2;
+
+	&.v2{
+		font-family: montserrat-bold;
+		font-size: 2rem;
+	}
 }
 
-.paragraph{
 
-}
 
 .button{
+	background-color: $rosaM;
+	font-family: montserrat-semibold;
+	font-size: 1.8rem;
+	padding: 1rem 2.4rem;
+	color: white;
+
+
+	&.oval{
+		border-radius: 25px;
+	}
+
+	&:hover{
+		color: white;
+		animation-name: pulse;
+		animation-timing-function: ease-in-out;
+		text-decoration: none;
+	}
+}
+
+.anchor{
+	font-family: montserrat-semibold;
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+ 
+    white-space: nowrap;
+    overflow: hidden;
+    color: $rosaM;
+    font-size: 1.8rem;
+    text-decoration: underline;
+    transition: color 1s ease;
+
+    &.small{
+    	font-size: 1.5rem;
+    }
+    &.large{
+    	font-size: 2rem;
+    }
+
+    &.no-underline{
+    	text-decoration: none !important;
+    }
+	&:hover,&.active{
+		outline: 0;
+	    color: black;
+	    transition: color 1s ease;
+	    cursor: pointer;
+	}
+
+	&.gris,&.active{
+		color: $gris;
+		&:hover{
+			color: $rosa;
+		}
+	}
+}
+
+.marker{
+	position: relative;
+
+	&:before{
+		content: "";
+		height: 8px;
+		width: 100%;
+		border-radius: 5px;
+		background-color: #BCFFEA;
+
+		position: absolute;
+		bottom: 0;
+		z-index: -1;
+	}
+}
+
+.animation-up{
+	transition: 0.3s;
+	transform: translate(0px, 0px);
 
 }
+
+
+
 
 
 
 @font-face{
-	font-family: name-font; 
-	src: url("../fonts/own-fonts/name-file-font.ext");
+	font-family: chapaza; 
+	src: url("../fonts/own-fonts/Chapaza.ttf");
 }
 
-.name-font {
-	font-family: name-font;
+.chapaza{
+	font-family: chapaza !important;
 }
+
+@font-face{
+	font-family: montserrat-regular; 
+	src: url("../fonts/own-fonts/Montserrat-Regular.ttf");
+}
+
+.montserrat-regular{
+	font-family: montserrat-regular !important;
+}
+
+@font-face{
+	font-family: montserrat-semibold; 
+	src: url("../fonts/own-fonts/Montserrat-SemiBold.ttf");
+}
+
+.montserrat-semibold{
+	font-family: montserrat-semibold !important;
+}
+
+@font-face{
+	font-family: montserrat-medium; 
+	src: url("../fonts/own-fonts/Montserrat-Medium.ttf");
+}
+
+.montserrat-medium{
+	font-family: montserrat-medium !important;
+}
+
+@font-face{
+	font-family: montserrat-bold; 
+	src: url("../fonts/own-fonts/Montserrat-Bold.ttf");
+}
+
+.montserrat-bold{
+	font-family: montserrat-bold !important;
+}
+@font-face{
+	font-family: montserrat-light; 
+	src: url("../fonts/own-fonts/Montserrat-Light.ttf");
+}
+
+.montserrat-light{
+	font-family: montserrat-light !important;
+}
+
+@font-face{
+	font-family: montserrat-extrabold; 
+	src: url("../fonts/own-fonts/Montserrat-ExtraBold.ttf");
+}
+
+.montserrat-extrabold{
+	font-family: montserrat-extrabold !important;
+}
+
+
+
+
