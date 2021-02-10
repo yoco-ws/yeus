@@ -5,6 +5,49 @@ $rosa2: #F492A5;
 $gris: #484848;
 $azul: #255A7B;
 //Tamaños de tipografías
+.paginacion{
+	span{
+		cursor: pointer;
+		font-family: montserrat-semibold;
+		font-size: 20px;
+		color: #484848;
+		margin-right: 1.4rem;
+		&.active,&:hover{
+			text-decoration: none;
+			color: $rosaM;
+		}
+	}
+	ul{
+		display: flex;
+		padding: 0;
+		font-family: montserrat-semibold;
+		font-size: 20px;
+		color: #484848;
+		margin-right: 3rem;
+		li{
+			list-style: none;
+			span:first-child{
+				margin-left: 2rem;
+			}
+			span{
+				cursor: pointer;
+				font-family: montserrat-semibold;
+				font-size: 20px;
+				color: #484848;
+				margin-right: 1.4rem;
+				&.active,&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+.img-fluid{
+	&.mw{
+		min-width: 100%;
+	}
+}
 
 .col-md-custom-4 {
 	flex: 0 0 29.166665%;
@@ -18,6 +61,14 @@ $azul: #255A7B;
 
 	&.v2{
 		font-size: 2.2rem;
+	}
+
+	&.v3{
+		font-size: 3rem;
+	}
+
+	&.rosa{
+		color: $rosa2;
 	}
 
 	&.gris{
@@ -43,11 +94,16 @@ $azul: #255A7B;
 		color: $azul;
 		font-family: montserrat-medium;
 	}
+
+	&.lh-40{
+		line-height: 40px;
+	}
 }
 .subtitle {
 	font-family: montserrat-semibold;
 	font-size: 1.6rem;
 	color: $rosa2;
+	line-height: 2.6rem;
 
 	&.v2{
 		font-family: montserrat-bold;
@@ -61,17 +117,22 @@ $azul: #255A7B;
 	&.rosa{
 		color: $rosaM;
 	}
+	&.blue{
+		color: $azul;
+	}
 }
 
 
 
 .button{
+	display: inline-block;
+	cursor: pointer;
 	background-color: $rosaM;
 	font-family: montserrat-semibold;
 	font-size: 1.8rem;
 	padding: 1rem 2.4rem;
 	color: white;
-
+	border: none;
 
 	&.oval{
 		border-radius: 25px;
@@ -79,13 +140,14 @@ $azul: #255A7B;
 
 	&:hover{
 		color: white;
-		animation-name: pulse;
-		animation-timing-function: ease-in-out;
+		animation: 1s pulse normal;
+	 	
+	 	transform: scale(1);
 		text-decoration: none;
 	}
 }
 
-.anchor{
+.anchor,.fake-anchor{
 	font-family: montserrat-semibold;
     position: relative;
     z-index: 2;
@@ -117,10 +179,10 @@ $azul: #255A7B;
 	    cursor: pointer;
 	}
 
-	&.gris,&.active{
+	&.gris{
 		color: $gris;
-		&:hover{
-			color: $rosa;
+		&:hover,&.active{
+			color: $rosaM;
 		}
 	}
 }
@@ -151,7 +213,7 @@ $azul: #255A7B;
 .underline-custom {
 	position: relative;
 	display: inline-flex;
-
+	z-index: 2;
 	&:before{
 		content: "";
 	    height: 4px;
@@ -161,7 +223,7 @@ $azul: #255A7B;
 	    position: absolute;
 	    bottom: 5px;
 	    right: 0;
-	    z-index: -1;
+	    z-index: 0;
 	}
 
 	&.left{
@@ -176,10 +238,265 @@ $azul: #255A7B;
 			width: 15%;
 		}
 	}
+
+	&.rosa{
+		&:before{
+			background-color: $rosaM;
+		}
+	}
+}
+
+
+form{
+	.form-group{
+		input,textarea {
+			border: none;
+			outline: none;
+			background-color: white;
+			font-size: 15px;
+			font-family: montserrat-regular;
+			padding: 10px 0 10px 20px;
+			width: 100%;
+
+			&::placeholder{
+				color: #C7C7C7;
+				font-family: montserrat-regular;
+			}
+
+		}
+	}
 }
 
 
 
+a.pop{
+ 	&:hover{
+ 		img{
+ 			animation: 1s pulse normal;
+		 	animation-name: pulse;
+		 	transform: scale(1);
+ 		}
+ 	}
+}
+
+
+@keyframes pulse{
+	0%{
+		transform: scaleX(1);
+	}
+	50%{ 
+		transform: scale3d(1.05,1.05,1.05);
+	}
+	100%{ 
+		transform: scaleX(1);
+	}
+}
+
+@keyframes anim-nav  {
+	0%{
+		clip-path: inset(0 100% 0 0);
+	}
+
+	100%{
+		clip-path: inset(0 0% 0 0);
+	}
+}	
+
+
+
+
+.forma{
+	position: absolute;
+	transition: 0.5s;
+	z-index: 3;
+	animation-delay: 4s;
+	&.semicircle-left{
+		
+	}
+
+	&.petal-1{
+		border-radius: 0% 0px 0px 0px;
+		&.active{
+			border-radius: 76% 0px 0px 0px;
+			animation: 2s petal normal cubic-bezier(1,.015,.295,1.225);
+		}
+	}
+
+	&.petal-2{
+		border-radius: 0px 0% 0px 0px;
+		&.active{
+			border-radius: 0px 76% 0px 0px;
+			animation: 2s petal_2 normal cubic-bezier(1,.015,.295,1.225);
+		}
+	}
+
+	&.petal-3{
+		border-radius: 0px 0px 0% 0px;
+		&.active{
+			border-radius: 0px 0px 76% 0px;
+			animation: 2s petal_3 normal cubic-bezier(1,.015,.295,1.225);
+		}
+	}
+
+	&.petal-4{
+		border-radius: 0px 0px 0px 0% ;
+		&.active{
+			border-radius: 0px 0px 0px 76% ;
+			animation: 2s petal_4 normal cubic-bezier(1,.015,.295,1.225);
+		}
+	}
+
+	&.circle{
+		border-radius: 0%;
+		&.active{
+			border-radius: 50%;
+			animation: 2s circle normal cubic-bezier(1,.015,.295,1.225);
+		}
+	}
+
+	&.limon{
+		border-radius: 0% 0px 0% 0px;
+		&.active{
+			border-radius: 59% 0px 59% 0px;
+			animation: 2s limon normal cubic-bezier(1,.015,.295,1.225);
+		}
+	}
+
+	&.double-petal-vertical{
+		border-radius: 0px 0px;
+		&.active{
+			border-radius: 0px 94px;
+			animation: 2s double-petal normal cubic-bezier(1,.015,.295,1.225);
+		}
+	}
+
+
+	&.gout{
+		border-radius: 0px 0px 0px 0px;
+		&.active{
+			border-radius: 34px 34px 0px 34px;
+			animation: 2s gout normal cubic-bezier(1,.015,.295,1.225);
+		}
+	}
+
+	&.rosa1{
+		background-color: #FFD9E1;
+	}
+	&.rosa2{
+		background-color: #FFA4C3;
+	}
+	&.rosa3{
+		background-color: #F37698;
+	}
+	&.verde{
+		background-color: #B3EBD4;
+	}
+}
+
+
+@keyframes petal {
+	0%{
+		border-radius: 0% 0px 0px 0px;
+		transform:rotate(180deg);
+	}	
+	
+	100%{
+		border-radius: 76% 0px 0px 0px;
+		transform:rotate(360deg);
+	}
+}
+
+@keyframes petal_2 {
+	0%{
+		border-radius: 0% 0px 0px 0px;
+		transform:rotate(180deg);
+	}	
+	
+	100%{
+		border-radius: 0px 76% 0px 0px;
+		transform:rotate(360deg);
+	}
+}
+
+
+@keyframes petal_3 {
+	0%{
+		border-radius: 0% 0px 0px 0px;
+		transform:rotate(180deg);
+	}	
+	
+	100%{
+		border-radius: 0px 0px 76% 0px;
+		transform:rotate(360deg);
+	}
+}
+
+@keyframes petal_4 {
+	0%{
+		border-radius: 0% 0px 0px 0px;
+		transform:rotate(180deg);
+	}	
+	
+	100%{
+		border-radius: 0px 0px 0px 76% ;
+		transform:rotate(360deg);
+	}
+}
+
+@keyframes double-petal {
+	0%{
+		border-radius: 0px 0px;
+	}	
+	100%{
+	    border-radius: 0px 94px;
+	}
+}
+
+@keyframes circle {
+	0%{
+		border-radius: 0%;
+		transform:rotate(180deg);
+	}	
+	
+	100%{
+		border-radius: 50%;
+		transform:rotate(360deg);
+	}
+}
+
+@keyframes gout {
+	0%{
+		border-radius: 0px 0px 0px 0px;
+		transform:rotate(180deg);
+	}	
+	
+	100%{
+		border-radius: 34px 34px 0px 34px;
+		transform:rotate(360deg);
+	}
+}
+
+
+.fadeUp{
+	opacity: 0;
+	&.animated{
+		opacity: 1;
+		animation: 1s fadeUp normal;
+	}
+}
+
+@keyframes fadeUp {
+	0%{
+		transform: translateY(35px);
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		transform: translateY(0px);
+	}
+}
 
 
 @font-face{

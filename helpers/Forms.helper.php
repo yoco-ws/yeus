@@ -41,7 +41,7 @@ function verifyCaptcha(){
 		throw new Exception("No pudimos enviar tu mensaje, por favor verifica que se marcó correctamente el captcha.");
 	}
 
-	$secret = '6LcchOYUAAAAAAkXkPiG4VA3SoDwA_vR61PaxpYi';
+	$secret = '6Le99U8aAAAAAFQxn0m0QyC-F6-EpROrRo0nID2s';
 	$response = json_decode(url_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secret."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
 
 	if($response['success'] == false){

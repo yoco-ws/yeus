@@ -1,9 +1,11 @@
 <?php 
 
-
+	require('vendor/autoload.php');
 	define('RUTA','http://localhost/yeus/');
 
+	//define('RUTA','https://yoco.ws/yeus/');
 
+	$client = new GuzzleHttp\Client(['base_uri' => 'https://directus.cliqued.it/yeus/']);
 
 	$favicon = "<link rel='icon' type='image/png' href='img/favicon.png' />";
 
@@ -26,6 +28,12 @@
 
 	$font_awesome_js = '<script src="'.RUTA.'js/all.js"></script>';
 
+	$animations = '
+		<link rel="stylesheet" href="'.RUTA.'css/animate.css">
+		<script src="'.RUTA.'js/wow.js"></script>
+      	<script>
+      		new WOW().init();
+      	</script>';
 	#Own 
 	#	js
 		$own_file_js = '<script src="'.RUTA.'js/yeus.js"></script>';

@@ -30,10 +30,11 @@ a:focus {
 }
 
 header.header{
+	background-color: white;
+	border-bottom: 1px solid #EDF7F3;
 	width: 100%;
 	position: fixed;
 	top: 0;
-	background-color: transparent;
 	padding: 2rem 5.66666%;
 	z-index: 100;
 	.anclas{
@@ -69,6 +70,11 @@ header.header{
 .forma{
 	position: absolute;
 	z-index: 1;
+}
+
+.section-gradient{
+	position: relative;
+	background: transparent linear-gradient(180deg, #FFFFFF00 0%, #FCE2E739 73%, #F492A512 100%) 0% 0% no-repeat padding-box;
 }
 
 section.filing{
@@ -129,6 +135,21 @@ section.services{
 	background-color: #DFF6EC;
 	padding: 6.2rem 0;
 
+	.forma-1 {
+		top: 0;
+		left: 0;
+	}
+
+	.forma-2{
+		right: 10%;
+		bottom: -5rem;
+		z-index: 2;
+	}
+	.forma-3{
+		right: 9%;
+		bottom: -4rem;	
+		z-index: 1;
+	}
 	.rect-1{
 		bottom: -1rem;
 		left: 0;
@@ -149,6 +170,24 @@ section.experiencia{
 
 	.offset-custom-1{
 		margin-left: 6.44444%;
+	}
+
+	.img-experiencia{
+		position: relative;
+
+		.forma-1{
+			top: 0;
+			left: 0;
+		}
+		.forma-2{
+			top: 0;
+			right: -5rem;
+		}
+		.gb-forma{
+			display: none;
+			left: -3rem;
+			bottom: -7rem;
+		}
 	}
 
 	figure{
@@ -178,7 +217,28 @@ section.conoceme{
 		.conoce-img1 {
 
 		}
-
+		figure{
+			position: relative;
+		}
+		.forma-1{
+			right: -11%;
+   		 	top: 9rem;
+		}
+		.forma-2{
+			right: -13%;
+    		top: 18rem;
+    		z-index: 3;
+		}
+		.forma-3{
+			top: 103%;
+			right: -2rem;
+			z-index: 2;
+		}
+		.forma-4{
+			top: 150%;
+			right: 49%;
+			z-index: 2;
+		}
 		.conoce-img2 {
 			position: relative;
 			margin-top: 27.3rem;
@@ -189,29 +249,197 @@ section.conoceme{
 
 
 section.noticias{
-	padding-top: 9.75rem;
-
-
-
+	padding-bottom: 10rem;
+	margin-top: 9.75rem;
+	.container-fluid{
+		.row:nth-child(2){
+			margin-top: 10rem;
+		}
+	}
 	.posts-principal{
 		border: 1px solid #FFE2E8;
 		border-radius: 5px 5px 100px 5px;
+		.col-md-5{
+			padding-top: 3.3rem;
+		}
+	}
+	
+	.row-preview{
+		margin-top: 6rem;
+	}
+	.more{
+		margin-top: 7.8rem;
+		position: relative;
+		.gout{
+			right: 0;
+			bottom: -4rem;
+		}
+	}
+}
+
+.row-preview,.row-posts{
+	
+	.post:nth-child(2n+1) a >div {
+		border-radius: 5px 5px 100px 5px;
+	}
+	.post:nth-child(2n+0) a >div{
+		border-radius: 5px;
+	}
+	.post{
+		& > a {
+			&:hover{
+				text-decoration: none;
+
+				h1{
+					text-decoration: underline;
+				}
+				.anchor{
+					outline: 0;
+				    color: black;
+				    transition: color 1s ease;
+				    cursor: pointer;
+				}
+			}
+		}
+		a > div{
+			border: 1px solid #FFE2E8;
+			box-shadow: 0px 0px 16px #F492A51A;
+		}
+		.content{
+			padding: 1.5rem 1.6rem 1.5rem 2.7rem;
+			.paragraph{
+				position: relative;
+				overflow: hidden;
+    			height: 13.4rem;	
+    			&:after{
+    				content: "";
+				    position: absolute;
+				    top: 0;
+				    left: 0;
+				    bottom: 0;
+				    right: 0;
+				    background: transparent -webkit-gradient(linear, left top, left bottom, from(#FFFFFF00), to(#ffffff)) 0% 0% no-repeat padding-box;
+				    background: transparent linear-gradient(180deg, #FFFFFF00 60%, #ffffff 100%) 0% 0% no-repeat padding-box;
+    			}
+			}
+		}
+	}
+}
+
+.linea{
+	top: -1rem;
+	left: 0;
+}
+
+section.contacto {
+
+	position: relative;
+	background-color: #FFEBEF;
+	padding: 2.7rem 0 3.4rem 0;
+
+	.mapa{
+		iframe{
+			width: 100%;
+			height: 215px;
+		}
+		.d-flex{
+			a{
+				margin-left: 2rem;
+			}
+		}
+
+		& > .row{
+			margin-top: 6.7rem;
+		}
+	}
+}
+
+
+footer{
+	background-color: #F9FCFF;
+	padding: 3rem 0;
+
+	ul{
+		padding: 0;
+		li{
+			margin-bottom: 1.3rem;
+			list-style: none;
+		}
+	}
+	.underline-custom{
+		&:before{
+			bottom: 0px;
+		}
+	}
+	.d-md-flex{
+		a{
+			margin-right: 2rem;
+		}
+	}
+}
+
+
+section.blog{
+	padding-bottom: 9rem; 
+
+	.posts-principal{
+		.cuerpo{
+			margin-left: 4%;
+		}
+
+		.forma-1{
+			right: -4rem;
+			bottom: -4rem;
+			z-index: 0;
+		}
+	}
+}
+
+
+section.post-section{
+	.col-md-6{
+		margin-top: 4rem;
 	}
 
+	.navigation-post{
+		margin-top: 6rem;
+		.previous{
+			margin-right: 11rem;
+		}
+	}
 }
+
+
+section.recomendados{
+	margin-top: 15rem;
+
+	padding-bottom: 10.5rem;
+
+	.col-md-12{
+		margin-bottom: 6.5rem;
+	}
+}
+
 //Fondos partículares
 
-@keyframes pulse{
-	0%{
-		transform: scaleX(1);
-	}
-	50%{ 
-		transform: scale3d(1.05,1.05,1.05);
-	}
-	100%{ 
-		transform: scaleX(1);
+figure.marco{
+	display: inline-flex;
+	position: relative;
+	z-index: 2;
+	&:before{
+		content: "";
+		position: absolute;
+		border: 2px solid #FFE2E8;
+		width: 100%;
+		height: 100%;
+		bottom: -2rem;
+		right: -2rem;
+		z-index: -1;
 	}
 }
+
+
+
 
 //Estilos particulares
 
@@ -220,5 +448,259 @@ section.noticias{
 @media (max-width:767px) {
 
 	//Estilos particulares
+
+
+
+	header{
+		z-index: 10;
+		padding: 1rem 0rem !important; 
+
+		.logo{
+			img{
+				width: 110px;
+				height: 40px;
+			}
+		}
+	}
+
+	nav{
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 9;
+		background-color: white;
+
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+
+		transform: translateX(-100%);
+		transition: 1s;
+
+		&.open{
+			transform: translateX(0%);
+	
+		}
+
+		.d-flex{
+			a{
+				margin-right: 2rem;
+			}
+			a:last-child{
+				margin-right: 0;
+			}
+		}
+
+		ul{
+			margin-bottom: 0;
+			padding: 0;
+			li{
+				margin-bottom: 3.9rem;
+				list-style: none;
+				a{
+					font-size: 18px;
+					font-family: montserrat-bold;
+					color: #646464;
+
+					&:hover,&.active{
+						color: #FFA5B7;
+					}
+				}
+			}
+		}
+
+	}
+
+	section.filing{
+		.imagen-principal{
+			margin-left: auto;
+		}
+	}
+
+	section.services{
+
+
+		.button-float{
+			margin: 4.9rem 0 9rem 0;
+		}
+		.citas{
+			margin-top: 7rem;
+		}
+	}
+
+
+	section.experiencia {
+		.img-experiencia{
+			margin-top: 2rem;
+			margin-left: 2rem; 
+		}
+		.offset-custom-1:first-child{
+			margin-left: 0 !important;
+		}
+	}
+
+	section.conoceme{
+
+		.row-conoceme {
+			.conoce-img2{
+				margin-top: 18.3rem ;
+			}	
+
+			.rectangulo{
+				top: unset;
+				bottom: 2.3rem;
+			}
+
+			figure{
+				position: relative;
+			}
+			.forma-1{
+				right: -11%;
+	   		 	top: 7.5rem;
+	   		 	width: 47px !important;
+	   		 	height: 47px !important;
+			}
+			.forma-2{
+				right: -13%;
+	    		top: 13rem;
+	    		z-index: 3;
+	    		width: 51px !important;
+	    		height: 122px !important;
+			}
+			.forma-3{
+				top: 103%;
+				right: 0rem;
+				z-index: 2;
+				width: 84px !important;
+				height: 84px !important;
+			}
+			.forma-4{
+				top: 132%;
+    			right: 65%;
+				z-index: 2;
+			}
+			
+		}
+		
+	}
+
+	section.noticias{
+		.container-fluid {
+			.row:nth-child(2){
+				margin-top: 4rem;
+			}
+		}	
+
+		.more{
+			.gout {
+				width: 37px !important;
+				height: 37px !important;
+
+				right: 4rem;
+   				bottom: 0rem;
+			}
+		}
+	}
+
+	.row-posts,.row-preview {
+		.post{
+			margin-bottom: 3rem;
+		}
+
+	}
+
+
+	section.contacto{
+		.mapa{
+			margin-top: 5.3rem;
+		}
+	}
+
+
+	section.blog {
+		.posts-principal {
+			.cuerpo {
+				margin-left: 0;
+			}
+		}
+	}
+
+
+
+	section.post-section {
+		.col-md-6 {
+			margin-top: 0rem;
+			.lh-40{
+				line-height: 3.4rem;
+			}
+		}
+		.share{
+			margin-top: 4rem;
+		}
+
+		.navigation-post {
+			.previous{
+				margin-right: 0;
+			}
+		}
+	}
+
+
+	section.recomendados{
+		margin-top: 6rem;
+		.col-md-12{
+			margin-bottom: 1.5rem;
+			.title{
+				font-size: 2.4rem !important;
+			}
+		}
+	}
+
+
+
+
+	footer{
+		.d-flex{
+			a:last-child{
+				margin-right: 0rem;
+			}
+		}
+		.nav-footer{
+			margin-top: 6rem;
+		}
+
+		.post-footer{
+			margin-top: 2rem;
+		}
+
+		.contact{
+			margin-top: 2rem;
+		}
+	}
+
+
+	.offset-custom{
+		margin-left: 0.0000% ;
+	}
+	.offset-custom-1{
+		margin-left: 0.0000% ;
+	}
+	.col-md-custom-4 {
+		flex: 0 0 66.666667%;
+    	max-width: 66.666667%;
+	}
+
+	.g-recaptcha{
+		margin-left: -10% !important;
+	}
+
+
+
+
+
 
 }
