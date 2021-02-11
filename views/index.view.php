@@ -44,7 +44,7 @@
 						</div>
 
 						<div class="wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0.4s">
-							<a href="" class="anchor large d-inline-flex"> <img src="<?=RUTA?>sprites/whats-rosado.svg" alt="" class="mr-4"> <?php echo $page['call_to_action'] ?> </a>
+							<a href="<?php echo $contacto['whatsapp'] ?>" class="anchor large d-inline-flex"> <img src="<?=RUTA?>sprites/whats-rosado.svg" alt="" class="mr-4"> <?php echo $page['call_to_action'] ?> </a>
 						</div>
 					</div>
 
@@ -76,11 +76,11 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-3 offset-custom ">
-						<h1 class="title text-center text-md-left wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0s">
+						<h1 class="title text-center text-md-left " >
 							Servicios
 						</h1>
 
-						<div class="paragraph blue wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0.3s">
+						<div class="paragraph blue " >
 							 <?php echo $page['cuerpo_servicios'] ?> 
 						</div>
 					</div>
@@ -88,13 +88,13 @@
 					<div class="col-md-7">
 						<div class="row">
 							<div class="col-md-12 text-md-right text-center d-none d-md-block">
-								<a href="" class="button"> Agenda tu cita </a>
+								<a href="<?=RUTA?>#contactame" class="button"> Agenda tu cita </a>
 							</div>
 							<div class="col-md-12 mt-md-4 citas">
 								<div class="row align-items-center">
 									<div class="col-md-4 text-center">
 										<img src="<?=RUTA?>sprites/cita-linea.svg" alt="">
-										<h1 class="subtitle v2 mt-4 wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0s">
+										<h1 class="subtitle v2 mt-4 " >
 											Cita en línea 
 										</h1>
 									</div>
@@ -106,7 +106,7 @@
 
 									<div class="col-md-4 text-center">
 										<img src="<?=RUTA?>sprites/cita-presencial.svg" alt="">
-										<h1 class="subtitle v2 mt-4 wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0s">
+										<h1 class="subtitle v2 mt-4 " >
 											Cita presencial
 										</h1>
 									</div>
@@ -124,8 +124,8 @@
 											</div>
 
 											<div class=" col-10 d-flex flex-column justify-content-between">
-												<span class="paragraph blue  mt-4 wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0.3s">  <?php echo $page['medida_preventiva_1'] ?>  </span>
-												<span class="paragraph blue  mb-4 wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0.3s">  <?php echo $page['medida_preventiva_2'] ?> </span> 
+												<span class="paragraph blue  mt-4 ">  <?php echo $page['medida_preventiva_1'] ?>  </span>
+												<span class="paragraph blue  mb-4 ">  <?php echo $page['medida_preventiva_2'] ?> </span> 
 											</div>
 										</div>
 										
@@ -145,10 +145,10 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12 offset-custom-1">
-						<h2 class="subtitle wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0s">
+						<h2 class="subtitle wow fadeIn " data-wow-duration="0" data-wow-offset="0" data-wow-delay="0s">
 							Experiencia
 						</h2>
-						<h1 class="title blue wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0s">
+						<h1 class="title blue wow fadeIn underline-custom left small" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0s">
 							<?php echo $page['titulo_experiencia'] ?>
 						</h1>
 					</div>
@@ -201,7 +201,9 @@
 					
 
 					<div class="col-md-5 ml-md-5 d-flex flex-wrap order-1 order-md-2">
-						<a href="" class="anchor small no-underline ml-auto underline-custom mb-5 mb-md-0"> Conóceme </a>
+						<div class="d-flex align-items-end ml-auto">
+							<h1 class="montserrat-semibold paragraph lh-40 txt-rosa ml-auto underline-custom mb-5 mb-md-0"> Conóceme </h1>
+						</div>
 						<div class="paragraph wow fadeIn2" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0.2s">
 							<?php echo $page['cuerpo_conoceme'] ?>
 						</div>
@@ -246,7 +248,7 @@
 					<div class="col-md-10 offset-md-1 px-0 row-posts row-preview ">
 						<div class="row">
 							<?php foreach ($editorial as $key => $post): ?>
-								<div class="col-md-3 post wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0s">
+								<div class="col-md-3 post wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0.<?php echo ($key * 2) + 1 ?>s ">
 									<a href="<?=RUTA?>articulo/<?php echo $post['id'] ?>/<?php echo $post['slug'] ?>/ ">
 										<div>
 											<img src="<?php echo $post['imagen_preview']['data']['full_url'] ?>" class="img-fluid mw" alt="">
@@ -309,7 +311,7 @@
 					<div class="col-md-10 offset-md-1 px-0 row-posts row-preview">
 						<div class="row">
 							<?php foreach ($videoBlog as $key => $post): ?>
-								<div class="col-md-3 post wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0s">
+								<div class="col-md-3 post wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0.<?php echo ($key * 2) + 1 ?>s ">
 									<a href="<?=RUTA?>articulo/<?php echo $post['id'] ?>/<?php echo $post['slug'] ?>/ ">
 										<div>
 											<img src="<?php echo $post['imagen_preview']['data']['full_url'] ?>" class="img-fluid mw" alt="">
@@ -340,14 +342,19 @@
 			<img src="<?=RUTA?>sprites/linea-rosa.svg" class="forma linea" alt="">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-11 offset-md-1">
+					
+					<div class="col-md-11 offset-md-1 ">
 						<img src="<?=RUTA?>img/contact.png" alt="" class="d-block-img-fluid">
-						<h1 class="title v3 rosa montserrat-extrabold mt-4 wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0s">
+						<h1 class="title v3 hide-on-submit rosa montserrat-extrabold mt-4 wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0s">
 							Contáctame
 						</h1>
 					</div>
-					<div class="col-md-5 offset-md-1 mt-4">
-						<form action="<?=RUTA?>" >
+
+					<div class="col-md-5 offset-md-1 mt-4 ">
+						<div class="paragraph show-on-submit" style="display: none;">
+							Gracias por ponerse en contacto conmigo, en breve me comunicaré para agendar la cita que desea o aclarar sus inquietudes. 
+						</div>
+						<form action="<?=RUTA?>helpers/Contact.helper.php" id="form-contact" >
 							<div class="hide-on-submit">
 								<div class="form-group">
 									<input type="text" name="name" placeholder="Nombre">
@@ -361,8 +368,9 @@
 								<div class="form-group">
 									<textarea name="message" id="message" cols="30" rows="7" placeholder="Mensaje"></textarea>
 								</div>
+								<div class="alert alert-danger paragraph mt-3 noto-bold white" style="display:none;"></div>
 								<div class="button-container d-md-flex justify-content-center  justify-content-between">
-									<div class="g-recaptcha" data-sitekey="6Le99U8aAAAAAAdgfdyVhA7QaHMSowD8DDwLNnDZ" style="transform:scale(0.8);-webkit-transform:scale(0.8); margin-left:-6%;"></div>
+									<div class="g-recaptcha" data-sitekey="6Le99U8aAAAAAAdgfdyVhA7QaHMSowD8DDwLNnDZ" style="transform:scale(0.8);-webkit-transform:scale(0.8); margin-left:-3rem;"></div>
 									<div class="d-flex align-items-center">
 										<input type="submit" class="button oval" value="Enviar">
 									</div>

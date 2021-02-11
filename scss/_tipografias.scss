@@ -54,6 +54,10 @@ $azul: #255A7B;
 	max-width: 29.166665%;
 }
 
+.txt-rosa{
+	color: $rosa2 !important; 
+}
+
 .title {
 	font-family: chapaza;
 	font-size: 4rem;
@@ -97,6 +101,9 @@ $azul: #255A7B;
 
 	&.lh-40{
 		line-height: 40px;
+	}
+	&.rosa{
+		color: $rosa2;
 	}
 }
 .subtitle {
@@ -177,6 +184,13 @@ $azul: #255A7B;
 	    color: black;
 	    transition: color 1s ease;
 	    cursor: pointer;
+
+	    img{
+	    	filter: brightness(0);
+	    }
+	}
+	img{
+		transition: 1s;
 	}
 
 	&.gris{

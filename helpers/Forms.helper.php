@@ -7,23 +7,28 @@ function validateContact( $data ){
 		switch ($key) {
 			case 'name':
 				if($value == ""){
-					throw new Exception("Please write your name");
+					throw new Exception("Porfavor escriba su nombre");
 					return false;
 				}
 				break;
 			case 'email':
 				if($value == ""){
-					throw new Exception("Please write your email address.");
+					throw new Exception("Porfavor escriba su correo");
 					return false;
 				}
 				break;
 			case 'message':
 				if($value == ""){
-					throw new Exception("Please select an answer.");
+					throw new Exception("Porfavor escriba su mensaje");
 					return false;
 				}
 				break;
-			
+			case 'cellphone':
+				if($value == ""){
+					throw new Exception("Porfavor escriba su Teléfono");
+					return false;
+				}
+				break;			
 		}
 	}
 	return true;

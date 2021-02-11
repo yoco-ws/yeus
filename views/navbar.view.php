@@ -1,7 +1,7 @@
 <header class="header">
 	<div class="container-fluid">
 		<div class="row align-items-center">
-			<div class="col-auto logo">
+			<div class="col-3 logo">
 				<a href="<?=RUTA?>">
 					<img src="<?=RUTA?>sprites/logo.svg"  alt="Dra. Yeus">
 				</a>
@@ -11,7 +11,7 @@
 				<a href="<?=RUTA?>" class=""> Inicio</a>
 				<a href="<?=RUTA?>#servicios" class=""> Servicios</a>
 				<a href="<?=RUTA?>#experiencia" class=""> Experiencia</a>
-				<a href="<?=RUTA?>#blog" class=""> Salud y vida</a>
+				<a href="<?=RUTA?>blog/" class=""> Salud y vida</a>
 				<a href="<?=RUTA?>#contactame" class=" marker"> Contáctame</a>
 			</div>
 
@@ -34,7 +34,7 @@
 			<a href="<?=RUTA?>#experiencia" class=""> Experiencia</a>
 		</li>
 		<li>
-			<a href="<?=RUTA?>#blog" class=""> Salud y vida</a>
+			<a href="<?=RUTA?>blog/" class=""> Salud y vida</a>
 		</li>
 		<li>
 			<a href="<?=RUTA?>#contactame" class=" marker"> Contáctame</a>

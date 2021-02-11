@@ -70,7 +70,7 @@ $videoBlog_destacado = json_decode($response_videoBlog_destacado->getBody(), tru
 
 
 
-$max_posts = 3;
+$max_posts = 2;
 $offset = 0;
 
 $response_editorial_count = $client->request('GET', 'items/blog', [

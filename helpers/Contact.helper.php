@@ -4,7 +4,13 @@
 require 'Courier.php';
 require 'Responses.php';
 require 'Forms.helper.php';
+require('../vendor/autoload.php');
 
+
+
+$client = new GuzzleHttp\Client(['base_uri' => 'https://directus.cliqued.it/yeus/']);
+
+require 'GlobalQuerys.php';
 
 
 try{
@@ -12,7 +18,7 @@ try{
 	if( validateContact( $_POST['data'] ) && verifyCaptcha() ){
 		//Enviar el correo de confirmación
 
-		if( sendContactMail( $_POST['data'] ) ){
+		if( sendContactMail( $_POST['data'], $contacto['correo_electronico'] ) ){
 
 			response('success', 'Gracias, nos pondremos en contacto pronto.' );
 

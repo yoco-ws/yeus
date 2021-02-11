@@ -29,7 +29,8 @@ $editorial =  json_decode($response_editorial->getBody(), true)['data']; //Conve
 
 $response = "";
 foreach ($editorial as $key => $post){
-	$response .= '<div class="col-md-3 post wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0s">
+	$duration = ($key * 2) + 1;
+	$response .= '<div class="col-md-3 post wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0.'.$duration.'s ">
 		<a href="'.$url.'articulo/'.$post["id"].'/'.$post["slug"].'">
 			<div>
 				<img src="'.$post["imagen_preview"]["data"]["full_url"].'" class="img-fluid mw" alt="">

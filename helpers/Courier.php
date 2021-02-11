@@ -3,7 +3,7 @@
 require_once('phpMailer/class.phpmailer.php');
 require_once('phpMailer/class.smtp.php');
 
-function sendContactMail($data){
+function sendContactMail($data, $correo){
 	// texto arriba 15px abajo 10px
 	
 	$url_site = (isset($_SERVER['HTTPS']) ? 'https' : 'http') . '://'.$_SERVER["HTTP_HOST"];
@@ -12,8 +12,8 @@ function sendContactMail($data){
 	$mail->CharSet = 'UTF-8';
 	$mail->Encoding = "base64";
 	
-	$mail->From = "";
-	$mail->FromName = "";
+	$mail->From = $correo;
+	$mail->FromName = "Dr. Yeus";
 	$mail->isHTML(true);
 
 	//temporal
@@ -22,15 +22,15 @@ function sendContactMail($data){
     $mail->SMTPAuth = true;
     $mail->Username = '8270bb35ef0296';   //username
     $mail->Password = '160ce573aef9ed';   //password
-    $mail->Port = 2525;                 //smtp port*/
+    $mail->Port = 2525;                 //smtp port  */
 	//temporal
 
 
-	//$mail->addAddress($data['email'], $data['name']);
+	$mail->addAddress($data['email'], $data['name']);
 	
-	$mail->Subject = "Contacto - Proyecto";
-	$headers =  'From: '."soporte@yoco.ws"."\r\n" .
-		    	'Reply-To: soporte@yoco.ws'.
+	$mail->Subject = "Contacto - Yeus";
+	$headers =  'From: '.$correo."\r\n" .
+		    	'Reply-To: '. $correo . 
 		    	'X-Mailer: PHP/' . phpversion();
 	$message = "<html>
 				<body leftmargin='0' marginwidth='0' topmargin='0' marginheight='0' offset='0'>
@@ -43,36 +43,35 @@ function sendContactMail($data){
 										<tr>
 											<td align='center' valign='top'>
 								
+
 												<table border='0' cellpadding='0' cellspacing='0' width='600' id='backgroundCentral'>
 													<tr>
 														<td class='headerContent'>
 															<div style='width:100%; margin: 0 auto; padding-top:20px; text-align:center;'>
-																<a href='https://tendejon.mx/'>
-																	<img src='https://tendejon.mx/img/header-mail.png' alt='Tendejón.mx'>
-																</a>
+																<a href='https://yoco.ws/yeus/'>
+																	<img src='https://yoco.ws/yeus/img/mail-header.jpg' alt='Yeus'>
+																</a>	
 													
 															</div>
 														</td>
 													</tr>
 													<tr>
 														<td valign='top'>
-															<div style='padding:10px;color: #000000;'>
-																<div style='text-align:center; width:100%;  border-top: 1px solid #a29c9c;'>
-																	<h2 style='color: #000000; '>Gracias por escribirnos, esta es la información que nos proporcionó:</h2>
-																</div>
-																<div style='text-align:center; font-size:15px;'>
+															<div style='padding:10px;color: #255A7B;'>
+																
+																<div style='text-align:left; font-size:15px;'>
 																	
-																	// Aqui va tu texto con la info
+																	".$data['name']." ".$data['email']."
 
+																	<br>
+																	Gracias por ponerse en contacto conmigo, en breve me comunicaré para agendar la cita que desea o aclarar sus inquietudes. 
 
-
-																</div>
-
-																<div style='text-align:center; font-size:10px;'>
-																	Nos pondremos en contacto pronto.
 																	<br><br>
+
+																	<strong> Dra. Yeus Flores </strong>
 																</div>
 
+																
 
 															</div>
 														</td>

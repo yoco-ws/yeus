@@ -96,7 +96,7 @@
 					<div class="col-md-10 offset-md-1 px-0 row-posts row-preview ">
 						<div class="row row-editorial">
 							<?php foreach ($editorial as $key => $post): ?>
-								<div class="col-md-3 post wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0s">
+								<div class="col-md-3 post wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0.<?php echo ($key * 2) + 1 ?>s ">
 									<a href="<?=RUTA?>articulo/<?php echo $post['id'] ?>/<?php echo $post['slug'] ?>/ ">
 										<div>
 											<img src="<?php echo $post['imagen_preview']['data']['full_url'] ?>" class="img-fluid mw" alt="">
@@ -117,17 +117,17 @@
 						<div class="row justify-content-center more">
 							<div class="paginacion d-flex editorial">
 								<?php if ( $paginacion_editorial >= 2 ): ?>
-									<span class="previous">  < </span>
+									<span class="previous"  offset="<?php echo $i * $max_posts ?>" destacado="<?php echo $editorial_destacado['id'] ?>" max_posts="<?php echo $max_posts ?>">  < </span>
 									<ul>
 										
 										<?php for ($i=0; $i < $paginacion_editorial  ; $i++) {  ?>
 											<li>
-												<span class="page" offset="<?php echo $i * $max_posts ?>" destacado="<?php echo $editorial_destacado['id'] ?>" max_posts="<?php echo $max_posts ?>"> <?php echo $i + 1 ?> </span>
+												<span class="page <?php if( $i == 0 ) echo "active"; ?> "  offset="<?php echo $i * $max_posts ?>" destacado="<?php echo $editorial_destacado['id'] ?>" max_posts="<?php echo $max_posts ?>"> <?php echo $i + 1 ?> </span>
 											</li>				
 										<?php }  ?>
 										
 									</ul>
-									<span class="next">  > </span>
+									<span class="next" max-offset="<?php echo $paginacion_editorial ?>" offset="<?php echo $i * $max_posts ?>" destacado="<?php echo $editorial_destacado['id'] ?>" max_posts="<?php echo $max_posts ?>">  > </span>
 								<?php endif ?>
 								
 							</div>					
@@ -172,7 +172,7 @@
 					<div class="col-md-10 offset-md-1 px-0 row-posts row-preview">
 						<div class="row row-video">
 							<?php foreach ($video as $key => $post): ?>
-								<div class="col-md-3 post wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0s">
+								<div class="col-md-3 post wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0.<?php echo ($key * 2) + 1 ?>s ">
 									<a href="<?=RUTA?>articulo/<?php echo $post['id'] ?>/<?php echo $post['slug'] ?>/ ">
 										<div>
 											<img src="<?php echo $post['imagen_preview']['data']['full_url'] ?>" class="img-fluid mw" alt="">
@@ -191,17 +191,19 @@
 							<?php endforeach ?>
 						</div>
 						<div class="row justify-content-center more">
-							<div class="paginacion video">
+							<div class="paginacion d-flex video">
 								<?php if ($paginacion_video >= 2): ?>
+									<span class="previous"  offset="<?php echo $i * $max_posts ?>" destacado="<?php echo $videoBlog_destacado['id'] ?>" max_posts="<?php echo $max_posts ?>">  < </span>
 									<ul>
-										<
+										
 										<?php for ($i=0; $i < $paginacion_video  ; $i++) {  ?>
 											<li>
-												<span class="page" offset="<?php echo $i * $max_posts ?>" destacado="<?php echo $videoBlog_destacado['id'] ?>" max_posts="<?php echo $max_posts ?>"> <?php echo $i + 1 ?> </span>
+												<span class="page <?php if( $i == 0 ) echo "active"; ?> "  offset="<?php echo $i * $max_posts ?>" destacado="<?php echo $videoBlog_destacado['id'] ?>" max_posts="<?php echo $max_posts ?>"> <?php echo $i + 1 ?> </span>
 											</li>				
 										<?php }  ?>
-										>
+										
 									</ul>
+									<span class="next" max-offset="<?php echo $paginacion_video ?>" offset="<?php echo $i * $max_posts ?>" destacado="<?php echo $videoBlog_destacado['id'] ?>" max_posts="<?php echo $max_posts ?>">  > </span>
 								<?php endif ?>
 								
 							</div>	
