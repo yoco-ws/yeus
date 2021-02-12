@@ -97,7 +97,7 @@ $videoBlog = json_decode($response_videoBlog->getBody(), true)['data']; //Conver
 require('helpers/GlobalQuerys.php');
 if(0){
 	header('Content-type: application/json');
-	echo json_encode($contacto, true);  //Los objetos de paypal ya vienen en formato json asi que se debe evitar el json_encode.
+	echo json_encode($confooter_blogtacto, true);  //Los objetos de paypal ya vienen en formato json asi que se debe evitar el json_encode.
 	die();
 }
 

@@ -46,7 +46,13 @@
 				<h1 class="subtitle rosa underline-custom left" >
 					Salud y vida
 				</h1>
-				<h1 class="paragraph montserat-medium mt-3"> Vacunarse contra el Covid-19 La enfermería vuelta un arte Una nueva cepa de coronavirus </h1>
+
+				<?php foreach ($footer_blog as $key => $value): ?>
+					<a href="<?=RUTA?>articulo/<?php echo $value['id'] ?>/<?php echo $value['slug'] ?>/ " class="no-underline">
+						<h1 class="paragraph montserat-medium mt-3"> <?php echo $value['titulo_preview']  ?></h1>	
+					</a>
+				<?php endforeach ?>
+				
 			</div>
 			<div class="col-md-2 contact">
 				<h1 class="subtitle blue">Contacto</h1>
@@ -78,6 +84,11 @@
 
 				</div>
 			</div>
+			<div class="col-md-12 aviso text-center mt-4 montserrat-regular">
+				<a href=" <?php echo $contacto['aviso']['data']['full_url'] ?> " class="montserrat-regular">
+					Aviso de privacidad  
+				</a>
+			</div>				
 		</div>
 	</div>
 </footer>

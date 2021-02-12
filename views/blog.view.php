@@ -96,7 +96,7 @@
 					<div class="col-md-10 offset-md-1 px-0 row-posts row-preview ">
 						<div class="row row-editorial">
 							<?php foreach ($editorial as $key => $post): ?>
-								<div class="col-md-3 post wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0.<?php echo ($key * 2) + 1 ?>s ">
+								<div class="col-md-3 post  ">
 									<a href="<?=RUTA?>articulo/<?php echo $post['id'] ?>/<?php echo $post['slug'] ?>/ ">
 										<div>
 											<img src="<?php echo $post['imagen_preview']['data']['full_url'] ?>" class="img-fluid mw" alt="">
@@ -172,7 +172,7 @@
 					<div class="col-md-10 offset-md-1 px-0 row-posts row-preview">
 						<div class="row row-video">
 							<?php foreach ($video as $key => $post): ?>
-								<div class="col-md-3 post wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0.<?php echo ($key * 2) + 1 ?>s ">
+								<div class="col-md-3 post">
 									<a href="<?=RUTA?>articulo/<?php echo $post['id'] ?>/<?php echo $post['slug'] ?>/ ">
 										<div>
 											<img src="<?php echo $post['imagen_preview']['data']['full_url'] ?>" class="img-fluid mw" alt="">

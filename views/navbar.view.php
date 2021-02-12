@@ -7,7 +7,7 @@
 				</a>
 			</div>
 
-			<div class="col-auto ml-auto anclas d-none d-md-block">
+			<div class="col-8 ml-auto anclas d-none d-md-flex justify-content-end">
 				<a href="<?=RUTA?>" class=""> Inicio</a>
 				<a href="<?=RUTA?>#servicios" class=""> Servicios</a>
 				<a href="<?=RUTA?>#experiencia" class=""> Experiencia</a>

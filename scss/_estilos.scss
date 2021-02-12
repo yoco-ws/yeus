@@ -79,6 +79,7 @@ header.header{
 
 section.filing{
 	position: relative;
+	z-index: 1;
 	background: transparent linear-gradient(180deg, #FFFFFF00 0%, #FCE2E739 73%, #F492A512 100%) 0% 0% no-repeat padding-box;
 	padding-bottom: 8.7rem;
 
@@ -134,7 +135,11 @@ section.services{
 	position: relative;
 	background-color: #DFF6EC;
 	padding: 6.2rem 0;
-
+	.esteto{
+		right: -23%;
+		bottom: 43%;
+		z-index: 0 !important ;
+	}
 	.forma-1 {
 		top: 0;
 		left: 0;
@@ -375,6 +380,17 @@ footer{
 		a{
 			margin-right: 2rem;
 		}
+	}
+	.aviso{
+		a{
+			font-size: 12px;
+			color: #484848;
+			&:hover{
+
+			}
+		}
+		font-size: 12px;
+		color: #484848;
 	}
 }
 

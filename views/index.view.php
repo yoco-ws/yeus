@@ -29,9 +29,6 @@
 		<?php require("views/navbar.view.php"); ?>
 
 		<section class="filing section-gradient bellow-nav">
-
-
-
 			<div class="forma petal-3 rosa1 rect-1" style="width: 76px; height: 76px;"></div>
 			<div class="container-fluid">
 				<div class="row align-items-end">
@@ -44,7 +41,7 @@
 						</div>
 
 						<div class="wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0.4s">
-							<a href="<?php echo $contacto['whatsapp'] ?>" class="anchor large d-inline-flex"> <img src="<?=RUTA?>sprites/whats-rosado.svg" alt="" class="mr-4"> <?php echo $page['call_to_action'] ?> </a>
+							<a href="<?php echo $contacto['whatsapp'] ?>" target="_blank" class="anchor large d-inline-flex"> <img src="<?=RUTA?>sprites/whats-rosado.svg" alt="" class="mr-4"> <?php echo $page['call_to_action'] ?> </a>
 						</div>
 					</div>
 
@@ -67,6 +64,9 @@
 
 
 		<section class="services" id="servicios">
+			<img src="<?=RUTA?>sprites/estetoscopio-bg.svg" class="img-fluid esteto forma" alt="">
+
+
 			<img src="<?=RUTA?>sprites/estetocopio.svg"  class="forma rect-1">
 			<div class="forma forma-1 petal-4 rosa1" style="width: 76px; height: 76px;"></div>
 
@@ -88,7 +88,7 @@
 					<div class="col-md-7">
 						<div class="row">
 							<div class="col-md-12 text-md-right text-center d-none d-md-block">
-								<a href="<?=RUTA?>#contactame" class="button"> Agenda tu cita </a>
+								<a href=" <?php echo $contacto['whatsapp'] ?> " target="_blank" class="button"> Agenda tu cita </a>
 							</div>
 							<div class="col-md-12 mt-md-4 citas">
 								<div class="row align-items-center">
@@ -157,7 +157,7 @@
 						<div class="paragraph wow fadeIn2" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0.3s">
 							<?php echo $page['cuerpo_experiencia'] ?>
 
-							<img src="<?=RUTA?>img/experiencia-logos.png" alt="" class="img-fluid mt-4" >
+							<img src=" <?php echo $page['logos']['data']['full_url'] ?> " alt="" class="img-fluid mt-4" >
 						</div>
 					</div>
 
@@ -248,7 +248,7 @@
 					<div class="col-md-10 offset-md-1 px-0 row-posts row-preview ">
 						<div class="row">
 							<?php foreach ($editorial as $key => $post): ?>
-								<div class="col-md-3 post wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0.<?php echo ($key * 2) + 1 ?>s ">
+								<div class="col-md-3 post ">
 									<a href="<?=RUTA?>articulo/<?php echo $post['id'] ?>/<?php echo $post['slug'] ?>/ ">
 										<div>
 											<img src="<?php echo $post['imagen_preview']['data']['full_url'] ?>" class="img-fluid mw" alt="">
@@ -311,7 +311,7 @@
 					<div class="col-md-10 offset-md-1 px-0 row-posts row-preview">
 						<div class="row">
 							<?php foreach ($videoBlog as $key => $post): ?>
-								<div class="col-md-3 post wow fadeIn" data-wow-duration="0" data-wow-offset="0" data-wow-delay="0.<?php echo ($key * 2) + 1 ?>s ">
+								<div class="col-md-3 post ">
 									<a href="<?=RUTA?>articulo/<?php echo $post['id'] ?>/<?php echo $post['slug'] ?>/ ">
 										<div>
 											<img src="<?php echo $post['imagen_preview']['data']['full_url'] ?>" class="img-fluid mw" alt="">
@@ -363,7 +363,7 @@
 									<input type="phone" name="cellphone" placeholder="Teléfono">
 								</div>
 								<div class="form-group">
-									<input type="email" name="email" placeholder="email">
+									<input type="email" name="email" placeholder="Email">
 								</div>
 								<div class="form-group">
 									<textarea name="message" id="message" cols="30" rows="7" placeholder="Mensaje"></textarea>
