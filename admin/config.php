@@ -5,7 +5,11 @@
 
 	//define('RUTA','https://yoco.ws/yeus/');
 
+
+
 	$client = new GuzzleHttp\Client(['base_uri' => 'https://directus.cliqued.it/yeus/']);
+
+
 
 	$favicon = "<link rel='icon' type='image/png' href='img/favicon.png' />";
 

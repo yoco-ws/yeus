@@ -5,13 +5,12 @@
 
 $response_page = $client->request('GET', 'items/home', [
 	'query' => [
-	    'fields' => '*.*.*',
+	    'fields' => '*.*.*',   
 	    'single' => true
 	]
 ]);
 
 $page = json_decode($response_page->getBody(), true)['data']; //Convertir a un arreglo, para uso en PHP
-
 
 
 
@@ -95,9 +94,9 @@ $response_videoBlog = $client->request('GET', 'items/blog', [
 $videoBlog = json_decode($response_videoBlog->getBody(), true)['data']; //Convertir a un arreglo, para uso en PHP
 
 require('helpers/GlobalQuerys.php');
-if(0){
+if(1){
 	header('Content-type: application/json');
-	echo json_encode($confooter_blogtacto, true);  //Los objetos de paypal ya vienen en formato json asi que se debe evitar el json_encode.
+	echo json_encode($categorias, true);  //Los objetos de paypal ya vienen en formato json asi que se debe evitar el json_encode.
 	die();
 }
 

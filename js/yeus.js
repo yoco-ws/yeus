@@ -37,7 +37,7 @@ document.querySelectorAll('a').forEach(anchor => {
 	        	       
 	        $('html, body').animate({
 
-		        scrollTop: $(hash).offset().top - $("header").innerHeight()
+		        scrollTop: $(hash).offset().top - $("header").innerHeight() 
 		    }, 800, function(){
 		    });	
         }

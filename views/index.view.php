@@ -26,6 +26,8 @@
 	</head>
 	<body>
 
+		
+		
 		<?php require("views/navbar.view.php"); ?>
 
 		<section class="filing section-gradient bellow-nav">
