@@ -5,7 +5,7 @@
 				<figure>
 					<img src="<?=RUTA?>sprites/logo-footer.svg" class="img-fluid" alt="">
 				</figure>
-				<div class="d-flex d-md-none mt-4 justify-content-center">
+				<div class="d-flex d-md-none mt-4 justify-content-center media-logo">
 					<?php if ( !is_null($contacto['facebook']) && $contacto['facebook'] != "" ): ?>
 						<a href=" <?php echo $contacto['facebook'] ?> " class="pop"><img src="<?=RUTA?>sprites/facebook-rosa.svg" alt=""></a>
 					<?php endif ?>

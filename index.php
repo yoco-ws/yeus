@@ -77,7 +77,6 @@ $videoBlog_destacado = json_decode($response_videoBlog_destacado->getBody(), tru
 
 
 
-
 $response_videoBlog = $client->request('GET', 'items/blog', [
 	'query' => [
 	    'fields' => '*.*.*',
@@ -94,7 +93,7 @@ $response_videoBlog = $client->request('GET', 'items/blog', [
 $videoBlog = json_decode($response_videoBlog->getBody(), true)['data']; //Convertir a un arreglo, para uso en PHP
 
 require('helpers/GlobalQuerys.php');
-if(1){
+if(0){
 	header('Content-type: application/json');
 	echo json_encode($categorias, true);  //Los objetos de paypal ya vienen en formato json asi que se debe evitar el json_encode.
 	die();

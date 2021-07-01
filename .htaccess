@@ -13,7 +13,7 @@ Options -Indexes
 # Reescribir la URL solicitada por el usuario
 
 
-RewriteBase /yeus/
+#RewriteBase /
 
 RewriteRule ^$ index\.php
 

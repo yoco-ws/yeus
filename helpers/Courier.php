@@ -12,7 +12,7 @@ function sendContactMail($data, $correo){
 	$mail->CharSet = 'UTF-8';
 	$mail->Encoding = "base64";
 	
-	$mail->From = $correo;
+	$mail->From = "correos@drayeus.com";
 	$mail->FromName = "Dr. Yeus";
 	$mail->isHTML(true);
 
@@ -25,11 +25,21 @@ function sendContactMail($data, $correo){
     $mail->Port = 2525;                 //smtp port  */
 	//temporal
 
+	$mail->isSMTP();
+	$mail->Host = 'mail.drayeus.com';  //mailtrap SMTP server
+	$mail->isHTML(true);
+	$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+	$mail->Username = 'correos@drayeus.com';   //username
+	$mail->Password = 'P3sOV0eaUVHO';   //password
+	$mail->Port = 465;
+
 
 	$mail->addAddress($data['email'], $data['name']);
-	
+	$mail->addBCC("soporte@yoco.ws");
+	$mail->addBCC("drayeusviflores@gmail.com");
+    
 	$mail->Subject = "Contacto - Yeus";
-	$headers =  'From: '.$correo."\r\n" .
+	$headers =  'From: correos@drayeus.com'."\r\n" .
 		    	'Reply-To: '. $correo . 
 		    	'X-Mailer: PHP/' . phpversion();
 	$message = "<html>
@@ -48,8 +58,8 @@ function sendContactMail($data, $correo){
 													<tr>
 														<td class='headerContent'>
 															<div style='width:100%; margin: 0 auto; padding-top:20px; text-align:center;'>
-																<a href='https://yoco.ws/yeus/'>
-																	<img src='https://yoco.ws/yeus/img/mail-header.jpg' alt='Yeus'>
+																<a href='https://drayeusviflores.com/'>
+																	<img src='https://drayeusviflores.com/img/mail-header.jpg' alt='Yeus'>
 																</a>	
 													
 															</div>

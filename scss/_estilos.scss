@@ -102,7 +102,7 @@ section.filing{
 
 		figure{
 			margin-bottom: 0;
-			display: inline-flex;
+			
 			position: relative;
 			.forma{
 				z-index: -1 !important;
@@ -197,7 +197,7 @@ section.experiencia{
 
 	figure{
 		position: relative;
-		display: inline-flex;
+	
 		
 		.bg-imagen{
 			bottom: -5rem;
@@ -369,6 +369,13 @@ footer{
 		li{
 			margin-bottom: 1.3rem;
 			list-style: none;
+		}
+	}
+
+	.media-logo{
+		a{
+			margin-left: 2rem;
+			transform: scale(1.25);
 		}
 	}
 	.underline-custom{

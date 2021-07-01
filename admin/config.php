@@ -1,10 +1,10 @@
 <?php 
 
 	require('vendor/autoload.php');
-	define('RUTA','http://localhost/yeus/');
+	//define('RUTA','https://drayeusviflores.com/');
 
 	//define('RUTA','https://yoco.ws/yeus/');
-
+	define('RUTA','http://localhost/yeus/');
 
 
 	$client = new GuzzleHttp\Client(['base_uri' => 'https://directus.cliqued.it/yeus/']);
@@ -48,7 +48,15 @@
 	#Extra
 	#
 	$google_analitycs = "
-				
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src='https://www.googletagmanager.com/gtag/js?id=G-YH40L22HQ5'></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-YH40L22HQ5');
+		</script>
 					";
 
 	$google_recaptcha = "";
